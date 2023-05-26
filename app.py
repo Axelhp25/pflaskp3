@@ -17,7 +17,7 @@ def crear():
         return redirect(url_for('listar'))
     else:
         return render_template('create.html')
-@app.route('/index',methods=['GET','POST'])
+@app.route('/lista',methods=['GET','POST'])
 def listar():
     listado = modelPersona.ver(conexion.obtener_conexion())
     return render_template('index.html',listado=listado)
