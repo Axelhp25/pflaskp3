@@ -20,7 +20,7 @@ def crear():
 @app.route('/lista',methods=['GET','POST'])
 def listar():
     listado = modelPersona.ver(conexion.obtener_conexion())
-    return render_template('index.html',listado=listado)
+    return render_template('lista.html',listado=listado)
 
 if __name__ == '__main__':
     app.run(debug=True)
