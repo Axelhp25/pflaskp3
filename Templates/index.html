@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block  title%}Index{% endblock title %}Index
+
+{% block body %}
+<table class="table container mt-5">
+    <thead class="table-light">
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Correo electronico</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        
+        {% for i in listado:%}
+        <tr>
+            <td>{{i[0]}}</td>
+            <td>{{i[1]}}</td>
+            <td>{{i[2]}}</td>
+            <td>{{i[3]}}</td>
+        </tr>
+        {%endfor%}
+
+    </tbody>
+  </table>
+
+{% endblock body %}
+
